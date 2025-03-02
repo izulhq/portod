@@ -4,7 +4,7 @@ import { dpupr, geopedia, ijulwebgis, moreProjects } from "@/app/images";
 
 export default function Projects() {
   return (
-    <section id="projects">
+    <section id="projects" className="border border-[#e5e5e5] p-4 rounded-lg">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">My Projects</h2>
         <Button variant="ghost" color="black" size="icon">

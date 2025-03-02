@@ -46,7 +46,7 @@ export default function Header() {
               </Button>
             </HoverCardTrigger>
             <HoverCardContent className="w-80">
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 bg-white p-4 rounded-lg shadow-md border border-[#e5e5e5]">
                 <div className="flex-shrink-0">
                   <Image
                     src={iconUns}
