@@ -7,6 +7,7 @@ import arcgis from "/app/images/arcgis.png";
 import qgis from "/app/images/qgis.png";
 import js from "/app/images/javascript.png";
 import gee from "/app/images/gee.png";
+import nextjs from "/app/images/nextjs.png";
 
 export {
   iconUns,
@@ -18,4 +19,5 @@ export {
   qgis,
   js,
   gee,
+  nextjs,
 };
