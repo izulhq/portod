@@ -3,6 +3,7 @@ import Stacks from "@/components/Stacks";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Education from "@/components/Education";
+import Work from "@/components/Work";
 
 export default function Portfolio() {
   return (
@@ -11,7 +12,7 @@ export default function Portfolio() {
         <Header />
 
         {/* Two-column layout container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Left column - Projects */}
           <div className="w-full">
             <Projects />
@@ -24,7 +25,7 @@ export default function Portfolio() {
         </div>
 
         {/* Two-column layout container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Left column - Projects */}
           <div className="w-full">
             <Education />
@@ -32,7 +33,7 @@ export default function Portfolio() {
 
           {/* Right column - Stacks */}
           <div className="w-full">
-            <Stacks />
+            <Work />
           </div>
         </div>
 

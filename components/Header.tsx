@@ -36,7 +36,7 @@ export default function Header() {
       <div className="max-w-4xl space-y-6">
         <p className="text-lg leading-relaxed">
           I am a student at
-          <HoverCard>
+          <HoverCard openDelay={200} closeDelay={300}>
             <HoverCardTrigger asChild>
               <Button
                 variant="outline"
