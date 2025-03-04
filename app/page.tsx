@@ -1,5 +1,5 @@
 import Projects from "@/components/Projects";
-import Stacks from "@/components/Stacks";
+import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Education from "@/components/Education";
@@ -7,12 +7,12 @@ import Work from "@/components/Work";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen text-black">
-      <div className="max-w-7xl mx-auto p-6">
+    <div className="min-h-screen text-black bg-[#f5f5f5]">
+      <div className="max-w-7xl mx-auto px-6 pt-8">
         <Header />
-
+        <div className="flex flex-col items-center space-y-4 pt-6 border-t border-[#e5e5e5]" />
         {/* Two-column layout container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 mt-2">
           {/* Left column - Projects */}
           <div className="w-full">
             <Projects />
@@ -20,7 +20,7 @@ export default function Portfolio() {
 
           {/* Right column - Stacks */}
           <div className="w-full">
-            <Stacks />
+            <Skills />
           </div>
         </div>
 

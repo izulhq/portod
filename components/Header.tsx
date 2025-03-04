@@ -16,8 +16,8 @@ import {
 
 export default function Header() {
   return (
-    <div className="mb-16">
-      <div className="flex items-center gap-4 mb-8">
+    <div className="mb-10">
+      <div className="flex items-center gap-4 mb-6">
         <Image
           src="/images/icon.png"
           alt="Profile"
@@ -84,7 +84,7 @@ export default function Header() {
         <div className="flex flex-wrap gap-4">
           <Button
             variant="outline"
-            className="rounded-full font-medium hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
+            className="rounded-full font-medium shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
             asChild
           >
             <Link
@@ -98,7 +98,7 @@ export default function Header() {
           </Button>
           <Button
             variant="outline"
-            className="rounded-full font-medium hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
+            className="rounded-full font-medium shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
             asChild
           >
             <Link
@@ -112,7 +112,7 @@ export default function Header() {
           </Button>
           <Button
             variant="outline"
-            className="rounded-full font-medium hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
+            className="rounded-full font-medium shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
             asChild
           >
             <Link
@@ -126,7 +126,7 @@ export default function Header() {
           </Button>
           <Button
             variant="outline"
-            className="rounded-full font-medium hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
+            className="rounded-full font-medium shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
             asChild
           >
             <Link
