@@ -20,7 +20,7 @@ export default function Work() {
             </div>
             <p className="text-base text-gray-700">Website Developer</p>
             <p className="text-sm text-gray-600 leading-relaxed">
-              Redesigned the UI/UX for the Geography Education's platform,
+              Redesigned the UI/UX for the Geography Education&apos;s platform,
               resulting in a 20% increase in user engagement and 30% faster load
               times.
             </p>
@@ -40,8 +40,8 @@ export default function Work() {
             <ul className="list-disc pl-4 text-sm text-gray-600 space-y-2 mt-2">
               <li>
                 Developed tourism village design for 10 villages in Kediri
-                Regency, Indonesia. Aiming to unlock each village's true tourism
-                potentials.
+                Regency, Indonesia. Aiming to unlock each village&apos;s true
+                tourism potentials.
               </li>
               <li>
                 Developed a design for a small lake to attract more tourism in
@@ -69,8 +69,8 @@ export default function Work() {
                 platforms, improving design consistency and looks by 40%.
               </li>
               <li>
-                Doing rebranding for De Goedang Resto's such as banner, foods
-                menu, social media, etc.
+                Doing rebranding for De Goedang Resto&apos;s such as banner,
+                foods menu, social media, etc.
               </li>
             </ul>
           </div>
