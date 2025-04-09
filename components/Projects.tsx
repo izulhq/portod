@@ -1,13 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import {
-  dpuprText,
-  geopediaText,
-  gislabText,
-  gameServerText,
-} from "@/app/images";
-import { BsClockHistory } from "react-icons/bs";
+import { geopediaText, gislabText, gameServerText } from "@/app/images";
+// import { BsClockHistory } from "react-icons/bs";
 import {
   HoverCard,
   HoverCardContent,
@@ -174,7 +169,7 @@ export default function Projects() {
           <HoverCardContent className="w-80 z-50">
             <div className="flex space-x-4 bg-white p-4 rounded-lg shadow-md border border-[#e5e5e5]">
               <div className="space-y-1">
-                <h3 className="text-md font-bold">ijul's playground</h3>
+                <h3 className="text-md font-bold">ijul&apos;s playground</h3>
                 <p className="text-sm text-gray-500">
                   A collection of game server management tools.
                   <a
