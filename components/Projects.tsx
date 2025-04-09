@@ -1,7 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { dpuprText, geopediaText, gislabText } from "@/app/images";
+import {
+  dpuprText,
+  geopediaText,
+  gislabText,
+  gameServerText,
+} from "@/app/images";
 import { BsClockHistory } from "react-icons/bs";
 import {
   HoverCard,
@@ -14,6 +19,7 @@ export default function Projects() {
     dpupr: false,
     geopedia: false,
     gislab: false,
+    gameServerText: false,
   });
 
   useEffect(() => {
@@ -23,6 +29,7 @@ export default function Projects() {
           dpupr: false,
           geopedia: false,
           gislab: false,
+          gameServerText: false,
         });
       }
     };
@@ -40,11 +47,11 @@ export default function Projects() {
         <h2 className="text-2xl font-bold">Projects</h2>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {/* DPUPR Project */}
+        {/* GISLab Project */}
         <HoverCard
-          open={openStates.dpupr}
+          open={openStates.gislab}
           onOpenChange={(open) =>
-            setOpenStates((prev) => ({ ...prev, dpupr: open }))
+            setOpenStates((prev) => ({ ...prev, gislab: open }))
           }
           openDelay={100}
           closeDelay={100}
@@ -54,13 +61,13 @@ export default function Projects() {
               className="relative aspect-square bg-white rounded-lg border-[2px] border-[#e5e5e5] overflow-hidden cursor-pointer"
               onClick={() => {
                 if (window.innerWidth < 768) {
-                  setOpenStates((prev) => ({ ...prev, dpupr: !prev.dpupr }));
+                  setOpenStates((prev) => ({ ...prev, gislab: !prev.gislab }));
                 }
               }}
             >
               <Image
-                src={dpuprText}
-                alt="Project 1"
+                src={gislabText}
+                alt="Project 3"
                 fill
                 className="object-cover p-2"
               />
@@ -69,12 +76,11 @@ export default function Projects() {
           <HoverCardContent className="w-80 z-50">
             <div className="flex space-x-4 bg-white p-4 rounded-lg shadow-md border border-[#e5e5e5]">
               <div className="space-y-1">
-                <h3 className="text-md font-bold">DPUPR Project</h3>
+                <h3 className="text-md font-bold">GISLab</h3>
                 <p className="text-sm text-gray-500">
-                  A GIS-based web application for public works and spatial
-                  planning.
+                  A comprehensive GIS laboratory management system.
                   <a
-                    href="https://izulhq.github.io/magangDPUPR"
+                    href="https://gis.izulhq.me"
                     className="text-sm text-blue-600 hover:underline ml-1"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -136,11 +142,11 @@ export default function Projects() {
           </HoverCardContent>
         </HoverCard>
 
-        {/* GISLab Project */}
+        {/* game servers */}
         <HoverCard
-          open={openStates.gislab}
+          open={openStates.gameServerText}
           onOpenChange={(open) =>
-            setOpenStates((prev) => ({ ...prev, gislab: open }))
+            setOpenStates((prev) => ({ ...prev, gameServerText: open }))
           }
           openDelay={100}
           closeDelay={100}
@@ -150,13 +156,16 @@ export default function Projects() {
               className="relative aspect-square bg-white rounded-lg border-[2px] border-[#e5e5e5] overflow-hidden cursor-pointer"
               onClick={() => {
                 if (window.innerWidth < 768) {
-                  setOpenStates((prev) => ({ ...prev, gislab: !prev.gislab }));
+                  setOpenStates((prev) => ({
+                    ...prev,
+                    gameServerText: !prev.gameServerText,
+                  }));
                 }
               }}
             >
               <Image
-                src={gislabText}
-                alt="Project 3"
+                src={gameServerText}
+                alt="Project 1"
                 fill
                 className="object-cover p-2"
               />
@@ -165,11 +174,11 @@ export default function Projects() {
           <HoverCardContent className="w-80 z-50">
             <div className="flex space-x-4 bg-white p-4 rounded-lg shadow-md border border-[#e5e5e5]">
               <div className="space-y-1">
-                <h3 className="text-md font-bold">GISLab</h3>
+                <h3 className="text-md font-bold">ijul's playground</h3>
                 <p className="text-sm text-gray-500">
-                  A comprehensive GIS laboratory management system.
+                  A collection of game server management tools.
                   <a
-                    href="https://gis.ijul.my.id"
+                    href="https://play.izulhq.me"
                     className="text-sm text-blue-600 hover:underline ml-1"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -183,8 +192,21 @@ export default function Projects() {
         </HoverCard>
 
         {/* Coming Soon Card */}
-        <div className="relative aspect-square bg-white rounded-lg border-[2px] border-[#e5e5e5] overflow-hidden flex flex-col items-center justify-center">
-          <BsClockHistory className="text-4xl mb-2" />
+        <div className="relative aspect-square bg-white rounded-lg border-[2px] border-[#e5e5e5] overflow-hidden flex flex-col items-center justify-center gap-2">
+          <div className="flex space-x-2 mb-2">
+            <div
+              className="w-3 h-3 bg-gray-600 rounded-full animate-pulse"
+              style={{ animationDuration: "1.5s" }}
+            ></div>
+            <div
+              className="w-3 h-3 bg-gray-600 rounded-full animate-pulse"
+              style={{ animationDuration: "1.5s", animationDelay: "0.5s" }}
+            ></div>
+            <div
+              className="w-3 h-3 bg-gray-600 rounded-full animate-pulse"
+              style={{ animationDuration: "1.5s", animationDelay: "1s" }}
+            ></div>
+          </div>
           <p className="text-center text-xs font-bold">
             More Projects
             <br />

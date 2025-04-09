@@ -13,6 +13,8 @@ import gee from "/app/images/gee.png";
 import nextjs from "/app/images/nextjs.png";
 import photoshop from "/app/images/photoshop.png";
 import premiere from "/app/images/premiere.png";
+import wp from "/app/images/wordpress.png";
+import gameServerText from "/app/images/game-servers.png";
 
 export {
   iconUns,
@@ -30,4 +32,6 @@ export {
   nextjs,
   photoshop,
   premiere,
+  wp,
+  gameServerText,
 };

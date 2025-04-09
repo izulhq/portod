@@ -14,8 +14,8 @@ import {
   nextjs,
   premiere,
   photoshop,
+  wp, // Added WordPress import
 } from "@/app/images";
-import { BsThreeDots } from "react-icons/bs";
 
 export default function Skills() {
   const [openStates, setOpenStates] = useState({
@@ -26,7 +26,7 @@ export default function Skills() {
     nextjs: false,
     photoshop: false,
     premiere: false,
-    more: false,
+    wordpress: false, // Added WordPress state
   });
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function Skills() {
           nextjs: false,
           photoshop: false,
           premiere: false,
-          more: false,
+          wordpress: false, // Added WordPress state
         });
       }
     };
@@ -225,6 +225,41 @@ export default function Skills() {
           </HoverCardContent>
         </HoverCard>
 
+        {/* WordPress */}
+        <HoverCard
+          open={openStates.wordpress}
+          onOpenChange={(open) =>
+            setOpenStates((prev) => ({ ...prev, wordpress: open }))
+          }
+          openDelay={100}
+          closeDelay={100}
+        >
+          <HoverCardTrigger asChild>
+            <div
+              className="w-16 h-16 md:w-12 md:h-12 border border-[#e5e5e5] shadow bg-white rounded-xl flex items-center justify-center overflow-hidden cursor-pointer"
+              onClick={() => {
+                if (window.innerWidth < 768) {
+                  setOpenStates((prev) => ({
+                    ...prev,
+                    wordpress: !prev.wordpress,
+                  }));
+                }
+              }}
+            >
+              <Image
+                src={wp}
+                alt="WordPress"
+                width={36}
+                height={36}
+                className="object-cover"
+              />
+            </div>
+          </HoverCardTrigger>
+          <HoverCardContent className="p-2 bg-white rounded-lg shadow-md border border-[#e5e5e5] z-50">
+            <p className="text-sm font-medium">WordPress</p>
+          </HoverCardContent>
+        </HoverCard>
+
         {/* Photoshop */}
         <HoverCard
           open={openStates.photoshop}
@@ -295,7 +330,7 @@ export default function Skills() {
           </HoverCardContent>
         </HoverCard>
 
-        {/* More Button */}
+        {/* More Button - Commented out
         <HoverCard
           open={openStates.more}
           onOpenChange={(open) =>
@@ -318,6 +353,7 @@ export default function Skills() {
             <p className="text-sm font-medium">And more ...</p>
           </HoverCardContent>
         </HoverCard>
+        */}
       </div>
     </section>
   );
