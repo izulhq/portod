@@ -124,7 +124,7 @@ export default function Projects() {
                 <p className="text-sm text-gray-500">
                   An interactive geographic learning platform.
                   <a
-                    href="https://geopedia.ijul.my.id"
+                    href="https://geopedia.izulhq.me"
                     className="text-sm text-blue-600 hover:underline ml-1"
                     target="_blank"
                     rel="noopener noreferrer"
