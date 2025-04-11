@@ -16,6 +16,7 @@ import premiere from "/app/images/premiere.png";
 import wp from "/app/images/wordpress.png";
 import gameServerText from "/app/images/game-servers.png";
 import gameServer from "/app/images/playijul.svg";
+import profile from "/app/images/profile.jpg";
 
 export {
   iconUns,
@@ -36,4 +37,5 @@ export {
   wp,
   gameServerText,
   gameServer,
+  profile,
 };
