@@ -126,7 +126,7 @@ export default function Projects() {
                   An interactive geography (Indonesian) learning platform for
                   high school students.
                   <a
-                    href="https://geopedia.ijul.my.id"
+                    href="https://geopedia.izulhq.me"
                     className="text-sm text-blue-600 hover:underline ml-1"
                     target="_blank"
                     rel="noopener noreferrer"
