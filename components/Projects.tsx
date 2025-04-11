@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { geopediaText, gislabText, gameServerText } from "@/app/images";
+import { geopedia, gislab, gameServer } from "@/app/images";
 // import { BsClockHistory } from "react-icons/bs";
 import {
   HoverCard,
@@ -14,7 +14,7 @@ export default function Projects() {
     dpupr: false,
     geopedia: false,
     gislab: false,
-    gameServerText: false,
+    gameServer: false,
   });
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function Projects() {
           dpupr: false,
           geopedia: false,
           gislab: false,
-          gameServerText: false,
+          gameServer: false,
         });
       }
     };
@@ -38,7 +38,7 @@ export default function Projects() {
       id="projects"
       className="border border-[#e5e5e5] bg-white p-4 rounded-lg shadow-md"
     >
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex items-center mb-4 gap-4">
         <h2 className="text-2xl font-bold">Projects</h2>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -61,7 +61,7 @@ export default function Projects() {
               }}
             >
               <Image
-                src={gislabText}
+                src={gislab}
                 alt="Project 3"
                 fill
                 className="object-cover p-2"
@@ -71,9 +71,10 @@ export default function Projects() {
           <HoverCardContent className="w-80 z-50">
             <div className="flex space-x-4 bg-white p-4 rounded-lg shadow-md border border-[#e5e5e5]">
               <div className="space-y-1">
-                <h3 className="text-md font-bold">GISLab</h3>
+                <h3 className="text-md font-bold">GIS Lab</h3>
                 <p className="text-sm text-gray-500">
-                  A comprehensive GIS laboratory management system.
+                  A comprehensive GIS (Geography Information System) laboratory
+                  management system.
                   <a
                     href="https://gis.izulhq.me"
                     className="text-sm text-blue-600 hover:underline ml-1"
@@ -110,7 +111,7 @@ export default function Projects() {
               }}
             >
               <Image
-                src={geopediaText}
+                src={geopedia}
                 alt="Project 2"
                 fill
                 className="object-cover p-2"
@@ -122,7 +123,8 @@ export default function Projects() {
               <div className="space-y-1">
                 <h3 className="text-md font-bold">Geopedia</h3>
                 <p className="text-sm text-gray-500">
-                  An interactive geographic learning platform.
+                  An interactive geography (Indonesian) learning platform for
+                  high school students.
                   <a
                     href="https://geopedia.ijul.my.id"
                     className="text-sm text-blue-600 hover:underline ml-1"
@@ -139,9 +141,9 @@ export default function Projects() {
 
         {/* game servers */}
         <HoverCard
-          open={openStates.gameServerText}
+          open={openStates.gameServer}
           onOpenChange={(open) =>
-            setOpenStates((prev) => ({ ...prev, gameServerText: open }))
+            setOpenStates((prev) => ({ ...prev, gameServer: open }))
           }
           openDelay={100}
           closeDelay={100}
@@ -153,13 +155,13 @@ export default function Projects() {
                 if (window.innerWidth < 768) {
                   setOpenStates((prev) => ({
                     ...prev,
-                    gameServerText: !prev.gameServerText,
+                    gameServer: !prev.gameServer,
                   }));
                 }
               }}
             >
               <Image
-                src={gameServerText}
+                src={gameServer}
                 alt="Project 1"
                 fill
                 className="object-cover p-2"
@@ -169,9 +171,9 @@ export default function Projects() {
           <HoverCardContent className="w-80 z-50">
             <div className="flex space-x-4 bg-white p-4 rounded-lg shadow-md border border-[#e5e5e5]">
               <div className="space-y-1">
-                <h3 className="text-md font-bold">ijul&apos;s playground</h3>
+                <h3 className="text-md font-bold">Game Servers</h3>
                 <p className="text-sm text-gray-500">
-                  A collection of game server management tools.
+                  A collection of game servers I host for me and my friends.
                   <a
                     href="https://play.izulhq.me"
                     className="text-sm text-blue-600 hover:underline ml-1"

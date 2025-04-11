@@ -37,7 +37,7 @@ export default function Education() {
               SMA Negeri 1 Karanganyar - Indonesia
             </p>
           </div>
-
+          <div className="border-t border-[#e5e5e5]" />
           {/* UNS Esport Community */}
           <div className="space-y-3">
             <div className="flex justify-between items-center">
