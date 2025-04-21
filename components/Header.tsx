@@ -1,3 +1,4 @@
+"use client";
 import {
   HoverCard,
   HoverCardContent,
@@ -5,7 +6,7 @@ import {
 } from "@radix-ui/react-hover-card";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { iconUns } from "@/app/images";
+import { iconUns, profile } from "@/app/images";
 import Link from "next/link";
 import {
   FaCat,
@@ -14,15 +15,51 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa6";
-import { profile } from "@/app/images";
+import { useState, useEffect } from "react";
 
 export default function Header() {
+  const [isProfileCardOpen, setIsProfileCardOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detect if we're on mobile
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Initial check
+    checkIfMobile();
+
+    // Listen for resize events
+    window.addEventListener("resize", checkIfMobile);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, []);
+
+  const handleProfileClick = () => {
+    if (isMobile) {
+      setIsProfileCardOpen((prev) => !prev);
+    }
+  };
+
   return (
-    <div className="mb-10 flex flex-col md:flex-row gap-8">
-      <div className="flex-shrink-0">
-        <HoverCard openDelay={100} closeDelay={200}>
+    <div className="md:mb-8 flex flex-col md:flex-row gap-4 md:gap-8">
+      <div className="flex-shrink-0 flex justify-center items-center md:items-start md:justify-start w-full md:w-auto">
+        <HoverCard
+          openDelay={100}
+          closeDelay={200}
+          open={isMobile ? isProfileCardOpen : undefined}
+          onOpenChange={(open) => {
+            if (!isMobile) {
+              // Let the HoverCard handle its own state on desktop
+              return;
+            }
+            setIsProfileCardOpen(open);
+          }}
+        >
           <HoverCardTrigger asChild>
-            <div className="cursor-pointer">
+            <div className="cursor-pointer" onClick={handleProfileClick}>
               <Image
                 src={profile}
                 alt="Profile"
@@ -32,7 +69,7 @@ export default function Header() {
               />
             </div>
           </HoverCardTrigger>
-          <HoverCardContent className="w-auto px-6 py-2 bg-white mt-2 rounded-full shadow-md border border-[#e5e5e5] z-50">
+          <HoverCardContent className="w-auto px-6 py-2 bg-white rounded-full shadow-md border border-[#e5e5e5] z-50">
             <div className="flex items-center space-x-2">
               <p className="text-sm font-medium">i love cats</p>
               <FaCat className="w-5 h-5 text-amber-600" />
@@ -42,7 +79,7 @@ export default function Header() {
       </div>
 
       <div className="flex-1">
-        <div className="mb-4">
+        <div className="mb-4 text-center md:text-left">
           <h1 className="text-2xl font-extrabold">Muhammad Izzulhaq</h1>
           <p className="text-gray-500 font-medium">
             Geography Enthusiast and Web Developer
@@ -50,7 +87,7 @@ export default function Header() {
         </div>
 
         <div className="max-w-4xl space-y-6">
-          <p className="text-lg leading-relaxed">
+          <p className="text-lg leading-relaxed text-justify">
             I am a student at
             <HoverCard openDelay={200} closeDelay={300}>
               <HoverCardTrigger asChild>
@@ -76,7 +113,7 @@ export default function Header() {
                     <h3 className="text-md font-bold whitespace-nowrap">
                       Sebelas Maret University
                     </h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 text-left">
                       Sebelas Maret University is a public university in
                       Surakarta, Indonesia, and is ranked among the top 10
                       universities in Indonesia.
@@ -93,67 +130,57 @@ export default function Header() {
                 </div>
               </HoverCardContent>
             </HoverCard>
-            majoring in Geography.<br></br>I am also like to cook up some
-            individuals projects that are geography-related.<br></br>
-            So, welcome to my website, where I am the one who cooks!
+            majoring in Geography.<br className="hidden md:inline"></br> I am
+            also like to cook up some individuals projects that are
+            geography-related.<br className="hidden md:inline"></br> So, welcome
+            to my website, where I am the one who cooks!
           </p>
-          <div className="flex flex-wrap gap-4">
-            <Button
-              variant="outline"
-              className="rounded-full font-medium shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
-              asChild
+
+          {/* Social Media Links */}
+          <div className="flex justify-center md:justify-start gap-4">
+            {/* GitHub */}
+            <Link
+              href="https://github.com/izulhq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-14 h-14 md:w-auto md:h-auto md:px-4 md:py-2 space-x-3 flex items-center justify-center rounded-full md:rounded-full bg-white border border-gray-200 shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white transition-colors"
             >
-              <Link
-                href="https://github.com/izulhq"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub className="w-5 h-5" />
-                <span>Github</span>
-              </Link>
-            </Button>
-            <Button
-              variant="outline"
-              className="rounded-full font-medium shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
-              asChild
+              <FaGithub className="w-5 h-5" />
+              <span className="hidden md:inline ml-2">Github</span>
+            </Link>
+
+            {/* LinkedIn */}
+            <Link
+              href="https://www.linkedin.com/in/izulhq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-14 h-14 md:w-auto md:h-auto md:px-4 md:py-2 space-x-3 flex items-center justify-center rounded-full md:rounded-full bg-white border border-gray-200 shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white transition-colors"
             >
-              <Link
-                href="https://www.linkedin.com/in/izulhq"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="w-5 h-5" />
-                <span>Linkedin</span>
-              </Link>
-            </Button>
-            <Button
-              variant="outline"
-              className="rounded-full font-medium shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
-              asChild
+              <FaLinkedinIn className="w-5 h-5" />
+              <span className="hidden md:inline ml-2">Linkedin</span>
+            </Link>
+
+            {/* Discord */}
+            <Link
+              href="https://discordapp.com/users/296253359214690304"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-14 h-14 md:w-auto md:h-auto md:px-4 md:py-2 space-x-3 flex items-center justify-center rounded-full md:rounded-full bg-white border border-gray-200 shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white transition-colors"
             >
-              <Link
-                href="https://discordapp.com/users/296253359214690304"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaDiscord className="w-5 h-5" />
-                <span>Discord</span>
-              </Link>
-            </Button>
-            <Button
-              variant="outline"
-              className="rounded-full font-medium shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white flex items-center space-x-2"
-              asChild
+              <FaDiscord className="w-5 h-5" />
+              <span className="hidden md:inline ml-2">Discord</span>
+            </Link>
+
+            {/* Instagram */}
+            <Link
+              href="https://www.instagram.com/izulhq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-14 h-14 md:w-auto md:h-auto md:px-4 md:py-2 space-x-3 flex items-center justify-center rounded-full md:rounded-full bg-white border border-gray-200 shadow-sm hover:bg-gradient-to-br from-blue-700 to-blue-400 hover:text-white transition-colors"
             >
-              <Link
-                href="https://www.instagram.com/izulhq"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram className="w-5 h-5" />
-                <span>Instagram</span>
-              </Link>
-            </Button>
+              <FaInstagram className="w-5 h-5" />
+              <span className="hidden md:inline ml-2">Instagram</span>
+            </Link>
           </div>
         </div>
       </div>

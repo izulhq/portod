@@ -204,11 +204,7 @@ export default function Projects() {
               style={{ animationDuration: "1.5s", animationDelay: "1s" }}
             ></div>
           </div>
-          <p className="text-center text-xs font-bold">
-            More Projects
-            <br />
-            Coming Soon
-          </p>
+          <p className="text-center text-xs font-bold">More Soon!</p>
         </div>
       </div>
     </section>
