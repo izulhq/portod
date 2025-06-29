@@ -17,6 +17,7 @@ import wp from "/app/images/wordpress.png";
 import gameServerText from "/app/images/game-servers.png";
 import gameServer from "/app/images/playijul.svg";
 import profile from "/app/images/profile.jpg";
+import blog from "/app/images/blog.png";
 
 export {
   iconUns,
@@ -38,4 +39,5 @@ export {
   gameServerText,
   gameServer,
   profile,
+  blog,
 };

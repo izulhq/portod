@@ -65,7 +65,7 @@ export default function Header() {
                 alt="Profile"
                 width={160}
                 height={160}
-                className="rounded-full border-2 border-gray-500/50 shadow-lg mt-2"
+                className="rounded-full border-2 border-blue-500/80 shadow-lg mt-2"
               />
             </div>
           </HoverCardTrigger>
