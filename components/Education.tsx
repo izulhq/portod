@@ -3,7 +3,7 @@ export default function Education() {
     <div className="bg-white py-4 border border-[#e5e5e5] rounded-lg shadow-md">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Title */}
-        <h2 className="text-2xl font-bold mb-8 text-gray-900">
+        <h2 className="text-2xl font-bold mb-6 text-gray-900">
           Education and Volunteering Experience
         </h2>
 
@@ -37,7 +37,7 @@ export default function Education() {
               SMA Negeri 1 Karanganyar - Indonesia
             </p>
           </div>
-          <div className="border-t border-[#e5e5e5]" />
+          <div className="border-t border-[#e5e5e5] my-0" />
           {/* UNS Esport Community */}
           <div className="space-y-3">
             <div className="flex justify-between items-center">
@@ -108,6 +108,15 @@ export default function Education() {
                 Coordinated complete tournament documentation, including content publication and real-time event coverage.
               </li>
             </ul>
+            <p className="mt-2">
+              <a
+              href="https://drive.google.com/file/d/1nWKQVgWnVFHDdVvW5auwW0b9CCUU8ecz/view?usp=sharing"
+              className="text-sm text-blue-600 hover:underline"
+              target="_blank"
+            >
+              View event report ↗
+            </a>
+            </p>
           </div>
         </div>
       </div>
