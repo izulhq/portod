@@ -32,13 +32,15 @@ export default function Work() {
               </li>
             </ul>
             </p>
-            <a
+            <p className="mt-2">
+              <a
               href="https://drive.google.com/file/d/1I-9O_JW96NKFaxKv_31odgaC6aYwd6GZ/view?usp=drivesdk"
               className="text-sm text-blue-600 hover:underline mt-2"
               target="_blank"
             >
               View certificate ↗
             </a>
+            </p>
           </div>
 
           {/* Geography Education S1*/}
@@ -143,13 +145,15 @@ export default function Work() {
                 Managed direct communications, community inquiries, and promotional partnerships for community events such as BSCT 2020.
               </li>
             </ul>
-            <a
+            <p className="mt-2">
+              <a
               href="https://instagram.com/brawlstars.ind"
-              className="text-sm text-blue-600 hover:underline mt-2"
+              className="text-sm text-blue-600 hover:underline"
               target="_blank"
             >
               View instagram ↗
             </a>
+            </p>
           </div>
 
           {/* De Goedang Resto */}
