@@ -8,6 +8,39 @@ export default function Work() {
         </h2>
 
         <div className="space-y-6">
+          {/* SID OPLA 2026 */}
+          <div className="space-y-3">
+            <div className="flex justify-between items-center">
+              <h3 className="text-lg font-semibold text-gray-800 leading-none">
+                SID OPLA 2026 - PPLH LPPM UNS
+              </h3>
+              <span className="text-sm text-gray-500 leading-none">
+                2026 (2 Months Contract)
+              </span>
+            </div>
+            <p className="text-base text-gray-700">Mapping Staff</p>
+            <p className="text-sm text-gray-600 leading-relaxed text-justify">
+              <ul className="list-disc pl-4 text-sm text-gray-600 space-y-2 mt-2 text-justify">
+              <li>
+                Assisted the Ministry of Agriculture in the paddy field irrigation assistance program by validating spatial and field data gathered by surveyors against satellite imagery to ensure accurate distribution.
+              </li>
+              <li>
+                Spatial analysis and overlay of key land parameters such as: LBS (Lahan Baku Sawah), HGU (Hak Guna Usaha), Land Ownership, and Designated Forest Areas.
+              </li>
+              <li>
+                Designed geospatial map for Farmers Group (Poktan) infrastructure plans to support regional irrigation development strategies.
+              </li>
+            </ul>
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1I-9O_JW96NKFaxKv_31odgaC6aYwd6GZ/view?usp=drivesdk"
+              className="text-sm text-blue-600 hover:underline"
+              target="_blank"
+            >
+              View Certificate ↗
+            </a>
+          </div>
+
           {/* Geography Education S1*/}
           <div className="space-y-3">
             <div className="flex justify-between items-center">
