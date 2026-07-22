@@ -97,7 +97,7 @@ export default function Education() {
             <p className="text-base text-gray-700">
               Documentation & Social Media Lead
             </p>
-            <p className="pl-4 text-sm text-gray-600 mt-2">
+            <p className="text-sm text-gray-600 mt-2">
               Organized a national-level community tournament supported by Line as Supercell&apos;s official representative in Indonesia.
             </p>
             <ul className="list-disc pl-4 text-sm text-gray-600 space-y-2 mt-2">
