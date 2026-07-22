@@ -51,6 +51,14 @@ export default function Education() {
             <p className="text-base text-gray-700">
               An Esports community in Sebelas Maret University
             </p>
+            <ul className="list-disc pl-4 text-sm text-gray-600 space-y-2 mt-2">
+              <li>
+                Became the Manager of Valorant Division (2023)
+              </li>
+              <li>
+                Became the General Admin of Genshin Impact Division (2021)
+              </li>
+            </ul>
           </div>
 
           {/* Himpunan Mahasiswa Geografi */}
@@ -73,6 +81,32 @@ export default function Education() {
                 division
               </li>
               <li>Contributing into all crucial events in the organization</li>
+            </ul>
+          </div>
+
+          {/* Brawl Stars Community Tournament */}
+          <div className="space-y-3">
+            <div className="flex justify-between items-center">
+              <h3 className="text-lg font-semibold text-gray-800 leading-none">
+                Brawl Stars Community Tournament 2020
+              </h3>
+              <span className="text-sm text-gray-500 leading-none">
+                2020
+              </span>
+            </div>
+            <p className="text-base text-gray-700">
+              Documentation & Social Media Lead
+            </p>
+            <p className="pl-4 text-sm text-gray-600 mt-2">
+              Organized a national-level community tournament supported by Line as Supercell&apos;s official representative in Indonesia.
+            </p>
+            <ul className="list-disc pl-4 text-sm text-gray-600 space-y-2 mt-2">
+              <li>
+                Managed social media publication and administrative tasks as the admin and the owner o community page (@brawlstars.ind)
+              </li>
+              <li>
+                Coordinated complete tournament documentation, including content publication and real-time event coverage.
+              </li>
             </ul>
           </div>
         </div>
