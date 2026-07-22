@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Education from "@/components/Education";
 import Work from "@/components/Work";
+import Freelance from "@/components/Freelance";
 
 export default function Portfolio() {
   return (
@@ -25,10 +26,11 @@ export default function Portfolio() {
         </div>
 
         {/* Two-column layout container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 mb-8">
           {/* Left column - Projects */}
           <div className="w-full">
             <Education />
+            <Freelance/>
           </div>
 
           {/* Right column - Stacks */}
@@ -37,6 +39,7 @@ export default function Portfolio() {
           </div>
         </div>
 
+        
         <Footer />
       </div>
     </div>
