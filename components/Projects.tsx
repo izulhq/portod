@@ -41,7 +41,7 @@ export default function Projects() {
       className="border border-[#e5e5e5] bg-white p-4 rounded-lg shadow-md"
     >
       <div className="flex items-center mb-4 gap-4 justify-between">
-        <h2 className="text-2xl font-bold">Projects</h2>{" "}
+        <h2 className="text-2xl font-bold">Personal Projects</h2>{" "}
         <div className="flex space-x-1 mr-2">
           <div
             className="w-2 h-2 bg-gray-600 rounded-full animate-pulse"
