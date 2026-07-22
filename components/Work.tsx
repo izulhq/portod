@@ -34,10 +34,10 @@ export default function Work() {
             </p>
             <a
               href="https://drive.google.com/file/d/1I-9O_JW96NKFaxKv_31odgaC6aYwd6GZ/view?usp=drivesdk"
-              className="text-sm text-blue-600 hover:underline"
+              className="text-sm text-blue-600 hover:underline mt-2"
               target="_blank"
             >
-              View Certificate ↗
+              View certificate ↗
             </a>
           </div>
 
@@ -114,6 +114,42 @@ export default function Work() {
                 Kemiri, Kebakkramat, Indonesia.
               </li>
             </ul>
+          </div>
+
+          {/* Brawl Stars Indonesia Admin */}
+          <div className="space-y-3">
+            <div className="flex justify-between items-center">
+              <h3 className="text-lg font-semibold text-gray-800 leading-none">
+                Instagram Admin & Owner
+              </h3>
+              <span className="text-sm text-gray-500 leading-none">
+                2018 - Present
+              </span>
+            </div>
+            <p className="text-base text-gray-700">
+              Brawl Stars Community Indonesia (@brawlstars.ind)
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              Founded and managed a dedicated community page for Brawl Stars player in Indonesia, growing audience engagement and delivering consistent gaming content.
+            </p>
+            <ul className="list-disc pl-4 text-sm text-gray-600 space-y-2 mt-2 text-justify">
+              <li>
+                Developed a unified brand identity across social platforms (Instagram and WhatsApp Group).
+              </li>
+              <li>
+                Consistently uploading daily gaming content, updates, and information about Brawl Stars.
+              </li>
+              <li>
+                Managed direct communications, community inquiries, and promotional partnerships for community events such as BSCT 2020.
+              </li>
+            </ul>
+            <a
+              href="https://instagram.com/brawlstars.ind"
+              className="text-sm text-blue-600 hover:underline mt-2"
+              target="_blank"
+            >
+              View instagram ↗
+            </a>
           </div>
 
           {/* De Goedang Resto */}
